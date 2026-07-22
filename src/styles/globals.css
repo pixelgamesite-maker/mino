@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --paper: #ffffff;
+  --paper-dim: #f7f7f7;
+  --ink: #0a0a0a;
+  --mino: #00ff41;
+  --mino-dim: #00b82f;
+  --line: #e3e3e3;
+  --muted: #7a7a7a;
+  --font-display: 'Space Mono', ui-monospace, monospace;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+button {
+  font-family: var(--font-display);
+  cursor: pointer;
+}
+
+::selection { background: var(--mino); color: var(--ink); }
+
+:focus-visible {
+  outline: 2px solid var(--mino);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
